@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev --open",
     "build": "webpack build --config webpack/webpack.config.js --env env=prod  --stats verbose",
+    "deploy": "aws s3 cp ./build/bundle.js s3://react-components-in-webflow/ --acl public-read",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
